@@ -16,6 +16,8 @@
 
         <!-- Styles -->
         @livewireStyles
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -41,5 +43,6 @@
         @stack('modals')
 
         @livewireScripts
+        @livewireChartsScripts
     </body>
 </html>
