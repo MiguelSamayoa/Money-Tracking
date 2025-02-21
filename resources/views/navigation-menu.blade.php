@@ -10,6 +10,16 @@
                     </a>
                 </div>
 
+                <form class="my-auto ml-5" id="language-form" action="{{ route('changeLang') }}" method="POST">
+                    @csrf
+                    <select name="locale" id="language-select" onchange="document.getElementById('language-form').submit();">
+                        <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>English</option>
+                        <option value="es" {{ app()->getLocale() == 'es' ? 'selected' : '' }}>Español</option>
+                        <option value="fr" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>Français</option>
+                        <option value="de" {{ app()->getLocale() == 'de' ? 'selected' : '' }}>Deutsch</option>
+                    </select>
+                </form>
+
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">

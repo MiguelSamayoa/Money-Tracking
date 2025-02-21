@@ -1,7 +1,7 @@
 <div class="bg-gray-100 min-h-full flex flex-col justify-center items-center px-6 py-20">
     <div class="text-center">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">Administra tu Dinero con Facilidad</h1>
-        <p class="text-lg text-gray-600 mb-6">Registra tus ingresos y gastos y alcanza tus metas financieras.</p>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">{{__('welcome_view.Header_1')}}</h1>
+        <p class="text-lg text-gray-600 mb-6"> {{ __('welcome_view.text_1') }} </p>
     </div>
 
     <div class="w-full max-w-5xl  bg-white p-6 rounded-lg shadow-lg">
@@ -11,8 +11,8 @@
     </div>
 
     <div class="text-center">
-        <h1 class="text-4xl font-bold text-gray-800 mt-20 mb-4">Genera Reportes</h1>
-        <p class="text-lg text-gray-600 mb-6">Registra tus ingresos y gastos y alcanza tus metas financieras.</p>
+        <h1 class="text-4xl font-bold text-gray-800 mt-20 mb-4"> {{ __('welcome_view.Header_2') }} </h1>
+        <p class="text-lg text-gray-600 mb-6"> {{ __('welcome_view.text_2') }} </p>
     </div>
 
     <div class="w-full max-w-5xl flex justify-stretch bg-white p-6 rounded-lg shadow-lg">

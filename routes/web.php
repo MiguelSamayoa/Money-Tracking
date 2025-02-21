@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
+use App\Livewire\Welcome;
 
-Route::get('/', App\Livewire\Welcome::class);
+Route::get('/', Welcome::class);
 
 Route::middleware([
     'auth:sanctum',
@@ -13,3 +17,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::post('/change-language', function (Request $request) {
+    $locale = $request->input('locale');
+    Session::put('locale', $locale);
+    App::setLocale($locale);
+    return redirect()->back();
+})->name('changeLang');
